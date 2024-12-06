@@ -55,17 +55,17 @@
         </div>
         
         <div id="featured" class="project-grid active">
-            <div class="project-card">
+            <div class="project-card" onclick="openProject('https://reseller.madewgn.web.id')">
                 <h3>📋 Panel Lapak VPN</h3>
                 <p>Panel Lapak VPN is a web application that allows users to manage their VPN connections.</p>
                 <span class="project-tag">Web Development</span>
             </div>
-            <div class="project-card">
+            <div class="project-card" onclick="openProject('https://t.me/tokovpn_bot')">
                 <h3>🎯 Bot Panel VPN</h3>
                 <p>Bot Panel VPN is a telegram bot application that allows users to manage their VPN connections.</p>
                 <span class="project-tag">Telegram Bot</span>
             </div>
-            <div class="project-card">
+            <div class="project-card" onclick="openProject('https://madewgn.web.id')">
                 <h3>Personal Portfolio</h3>
                 <p>Personal Portfolio is a website that showcases my skills and projects.</p>
                 <span class="project-tag">Web Development</span>
@@ -74,12 +74,12 @@
         
         
         <div id="past" class="project-grid">
-            <div class="project-card">
+            <div class="project-card" onclick="openProject('#')">
                 <h3>📚 Personal Knowledge Base</h3>
                 <p>Developed a comprehensive knowledge management system for a researcher.</p>
                 <span class="project-tag">Knowledge Management</span>
             </div>
-            <div class="project-card">
+            <div class="project-card" onclick="openProject('#')">
                 <h3>📊 Analytics Dashboard</h3>
                 <p>Created a custom dashboard for tracking business metrics and KPIs.</p>
                 <span class="project-tag">Analytics</span>
@@ -168,6 +168,10 @@
             const tabs = document.querySelectorAll('.project-tabs .skills-tab');
             tabs.forEach(tab => tab.classList.remove('active'));
             element.classList.add('active');
+        }
+
+        function openProject(url) {
+            window.open(url, '_blank');
         }
     </script>
 </body>
